@@ -10,6 +10,7 @@ require 'thin'
 require 'dashing/constants'
 require 'dashing/serversentevents'
 require 'dashing/websockets'
+require 'dashing/extwebsockets'
 
 SCHEDULER = Rufus::Scheduler.new
 

@@ -30,6 +30,8 @@ class window.Dashing extends Batman.App
   @on 'reload', (data) ->
     window.location.reload(true)
 
+#  @on 'ready', (data) ->
+#    @source.subscribe(@widgets)
 
   @root ->
 

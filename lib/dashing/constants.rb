@@ -3,3 +3,4 @@ module EventsEngineTypes
 	WS="WSBI"
 	WSEXT="WS"
 end
+
