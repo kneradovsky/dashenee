@@ -7,10 +7,10 @@ require 'sass'
 require 'json'
 require 'yaml'
 require 'thin'
-require 'dashing/constants'
-require 'dashing/serversentevents'
-require 'dashing/websockets'
-require 'dashing/extwebsockets'
+require 'dashenee/constants'
+require 'dashenee/serversentevents'
+require 'dashenee/websockets'
+require 'dashenee/extwebsockets'
 
 SCHEDULER = Rufus::Scheduler.new
 

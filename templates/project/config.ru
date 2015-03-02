@@ -1,5 +1,5 @@
-require 'dashing'
-require 'dashing/constants'
+require 'dashenee'
+require 'dashenee/constants'
 
 configure do
   set :auth_token, 'YOUR_AUTH_TOKEN'

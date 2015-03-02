@@ -1,7 +1,7 @@
 require 'thor'
 require 'open-uri'
 
-module Dashing
+module Dashenee
   class CLI < Thor
     include Thor::Actions
 

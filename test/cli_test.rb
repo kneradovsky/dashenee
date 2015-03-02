@@ -1,8 +1,8 @@
 require 'test_helper'
 
-class CLITest < Dashing::Test
+class CLITest < Dashenee::Test
   def setup
-    @cli = Dashing::CLI.new
+    @cli = Dashenee::CLI.new
   end
 
   def test_new_task_creates_project_directory
@@ -48,7 +48,7 @@ class CLITest < Dashing::Test
 
   def test_install_task_requests_gist_from_downloader
     return_value = { 'files' => [] }
-    Dashing::Downloader.stubs(:get_gist).with(123).returns(return_value).once
+    Dashenee::Downloader.stubs(:get_gist).with(123).returns(return_value).once
 
     capture_io { @cli.install(123) }
   end
@@ -67,7 +67,7 @@ class CLITest < Dashing::Test
 
     Dir.stubs(:pwd).returns('')
 
-    Dashing::Downloader.stubs(:get_gist).returns(JSON.parse(json_response))
+    Dashenee::Downloader.stubs(:get_gist).returns(JSON.parse(json_response))
     @cli.stubs(:create_file).with('/jobs/ruby_job.rb', 'some job content').once
     @cli.stubs(:create_file).with('/widgets/num/num.html', 'some html content').once
     @cli.stubs(:create_file).with('/widgets/num/num.scss', 'some sass content').once
@@ -86,7 +86,7 @@ class CLITest < Dashing::Test
       }
     JSON
 
-    Dashing::Downloader.stubs(:get_gist).returns(JSON.parse(json_response))
+    Dashenee::Downloader.stubs(:get_gist).returns(JSON.parse(json_response))
     @cli.stubs(:create_file).never
 
     capture_io { @cli.install(123) }
@@ -94,7 +94,7 @@ class CLITest < Dashing::Test
 
   def test_install_task_warns_when_gist_not_found
     error = OpenURI::HTTPError.new('error', mock())
-    Dashing::Downloader.stubs(:get_gist).raises(error)
+    Dashenee::Downloader.stubs(:get_gist).raises(error)
 
     output, _ = capture_io { @cli.install(123) }
 
@@ -138,7 +138,7 @@ class CLITest < Dashing::Test
 
   def test_job_task_requires_every_ruby_file_in_lib
     Dir.stubs(:pwd).returns('')
-    Dir.stubs(:[]).returns(['lib/dashing/cli.rb', 'lib/dashing.rb'])
+    Dir.stubs(:[]).returns(['lib/dashenee/cli.rb', 'lib/dashenee.rb'])
     @cli.stubs(:require_file).times(3)
 
     @cli.job('special_job')
@@ -161,7 +161,7 @@ class CLITest < Dashing::Test
     }
 
     assertion_map.each do |input, expected|
-      assert_equal expected, Dashing::CLI.hyphenate(input)
+      assert_equal expected, Dashenee::CLI.hyphenate(input)
     end
   end
 

@@ -1,6 +1,6 @@
 require "test_helper"
 
-class EventsEngineAbsractTest < Dashing::Test
+class EventsEngineAbsractTest < Dashenee::Test
     def setup
     end
     def test_exceptions_raised

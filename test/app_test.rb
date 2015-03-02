@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'haml'
 
-class AppTest < Dashing::Test
+class AppTest < Dashenee::Test
   def setup
     @connection = []
     app.settings.eventsengine.instance_variable_set(:@connections,  [@connection])
@@ -141,7 +141,7 @@ class AppTest < Dashing::Test
     source_path = File.expand_path('../../templates', __FILE__)
 
     temp do |dir|
-      cli = Dashing::CLI.new
+      cli = Dashenee::CLI.new
       cli.stubs(:source_paths).returns([source_path])
       silent { cli.new 'new_project' }
 

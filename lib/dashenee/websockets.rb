@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra-websocket'
-require 'dashing/constants'
-require 'dashing/serversentevents'
+require 'dashenee/constants'
+require 'dashenee/serversentevents'
 
 
 WS_SUPPORTED_SERVER = ['thin']

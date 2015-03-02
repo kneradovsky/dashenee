@@ -1,7 +1,7 @@
 require 'test_helper'
 require 'haml'
 
-class ServerSentEventsTest < Dashing::Test
+class ServerSentEventsTest < Dashenee::Test
     def setup
         @connection=[]
         

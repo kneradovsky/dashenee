@@ -2,7 +2,7 @@ require 'net/http'
 require 'open-uri'
 require 'json'
 
-module Dashing
+module Dashenee
   module Downloader
     extend self
 

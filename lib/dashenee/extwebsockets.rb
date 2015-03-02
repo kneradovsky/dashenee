@@ -1,8 +1,8 @@
 require 'net/http'
 require 'sinatra'
 require 'sinatra-websocket'
-require 'dashing/constants'
-require 'dashing/serversentevents'
+require 'dashenee/constants'
+require 'dashenee/serversentevents'
 require 'logger'
 
 set :WSExtAuthToken , "token1"

@@ -1,1 +1,1 @@
-Check out http://shopify.github.com/dashing for more information.
+Check out http://kneradovsky.github.com/dashenee for more information.

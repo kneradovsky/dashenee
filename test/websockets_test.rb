@@ -2,7 +2,7 @@ require "test_helper"
 require 'json'
 require 'sinatra-websocket/ext/thin/connection'
 
-class WebSocketEventsTest < Dashing::Test
+class WebSocketEventsTest < Dashenee::Test
     def setup
         @connection=[]
         app.settings.eventsengine = EventsEngine.create(EventsEngineTypes::WS)

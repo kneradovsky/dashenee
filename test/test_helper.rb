@@ -12,7 +12,7 @@ require 'minitest/autorun'
 require 'minitest/pride'
 require 'mocha/setup'
 
-require_relative '../lib/dashing'
+require_relative '../lib/dashenee'
 
 FakeWeb.allow_net_connect = false
 
@@ -36,7 +36,7 @@ ensure
   FileUtils.rm_rf(path) if File.exists?(path)
 end
 
-module Dashing
+module Dashenee
   class Test < Minitest::Test
     include Rack::Test::Methods
 

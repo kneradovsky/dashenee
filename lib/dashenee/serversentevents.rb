@@ -1,5 +1,5 @@
 require 'sinatra'
-require 'dashing/constants'
+require 'dashenee/constants'
 
 get '/events', provides: 'text/event-stream' do
   protected!
